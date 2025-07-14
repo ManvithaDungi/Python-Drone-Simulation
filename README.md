@@ -52,7 +52,12 @@ You should see the GUI open when you run this.
 gz sim shapes.sdf
 ```
 References  : https://gazebosim.org/docs/harmonic/install
+
+## Setting up QGroundControl :
+Download QGroundControl from https://qgroundcontrol.com/
+
 ## Cloning PX4-Autopilot :
+
 ### Step 1: Clone PX4 Autopilot from git
 ```
 cd ~
@@ -68,7 +73,40 @@ make sure you are in PX4-Autopilot folder while running this
 ```
 PX4_SIM_MODEL=x500 PX4_GZ_VERSION=harmonic make px4_sitl gz
 ```
+### Step 4 : Connecting to QGroundControl
+Make it executalble and run
+```
+chmod +x ./QGroundControl.AppImage
+./QGroundControl.AppImage
+```
 
-## Setting up QGroundControl :
+## Python OffBoard Control with MAVSDK:
 
+### Step 1: Install MAVSDK for python:
+```
+pip install mavsdk
+```
+### Step 2 : Run a Control Script :
+Create a file offboard_control.py and run
+```
+python3 offboard_control.py
+```
+Make sure PX4 SITL is running before this
+
+## Adding Camera and Custom Worlds :
+To attach a virtual camera, edit the drone’s .sdf file inside PX4-Autopilot/Tools/simulation/gz/models/
+
+To import a custom world:
+```
+export PX4_GZ_WORLD=your_world_name
+PX4_SIM_MODEL=x500 PX4_GZ_VERSION=harmonic make px4_sitl gz
+```
+References
+
+    PX4 Docs: https://docs.px4.io/
+
+    Gazebo Harmonic Docs: https://gazebosim.org/docs/harmonic
+
+    MAVSDK Python: https://mavsdk.mavlink.io/main/en/
+    
 ## Setting up ROS2 :
