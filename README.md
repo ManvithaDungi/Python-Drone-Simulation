@@ -8,7 +8,7 @@ This is the full setup and complete process of PX4 Autopilot with Gazebo Ignitio
 - QGroundControl
 
 ## Setting up Gazebo :
- We are using Gazebo Harmonic, you can also use Gazebo Ignition.
+ We are using Gazebo Harmonic, you have to use Gazebo Fortress if you're plannng on integrating ROS2
  
  ### Step 1: Set up the Gazebo APT repository
 ```
