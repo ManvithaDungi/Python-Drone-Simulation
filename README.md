@@ -101,12 +101,12 @@ To import a custom world:
 export PX4_GZ_WORLD=your_world_name
 PX4_SIM_MODEL=x500 PX4_GZ_VERSION=harmonic make px4_sitl gz
 ```
-References
+####References:
 
-    PX4 Docs: https://docs.px4.io/
-
-    Gazebo Harmonic Docs: https://gazebosim.org/docs/harmonic
-
-    MAVSDK Python: https://mavsdk.mavlink.io/main/en/
+#####PX4 Docs: https://docs.px4.io/
+    
+ #####Gazebo Harmonic Docs: https://gazebosim.org/docs/harmonic
+    
+ #####MAVSDK Python: https://mavsdk.mavlink.io/main/en/
     
 ## Setting up ROS2 :
