@@ -286,49 +286,54 @@ if __name__ == "__main__":
 ```
 
 #### Step 3: Run the Control Script
+Make sure PX4 SITL is running first
 ```bash
-# Make sure PX4 SITL is running first
 cd ~/PX4-Autopilot
 PX4_SIM_MODEL=x500 PX4_GZ_VERSION=harmonic make px4_sitl gz
-
-# In another terminal, run the Python script
+```
+In another terminal, run the Python script
+```bash
 python3 offboard_control.py
 ```
 
 ### Method 3: ROS2 Integration
 
 #### Step 1: Install ROS2 Humble
+Add ROS2 apt repository
 ```bash
-# Add ROS2 apt repository
 sudo apt update
 sudo apt install curl gnupg lsb-release
 sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | sudo apt-key add -
 sudo sh -c 'echo "deb [arch=amd64,arm64] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/ros2-latest.list'
-
-# Install ROS2 Humble
+```
+Install ROS2 Humble
+```bash
 sudo apt update
 sudo apt install ros-humble-desktop
 ```
 
 #### Step 2: Install PX4-ROS2 Bridge
+Install required packages
 ```bash
-# Install required packages
 sudo apt install ros-humble-px4-msgs
-
-# Source ROS2 environment
+```
+ Source ROS2 environment
+ ```bash
 echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
 #### Step 3: Build and Run ROS2 Bridge
+Navigate to PX4 directory
 ```bash
-# Navigate to PX4 directory
 cd ~/PX4-Autopilot
-
-# Build with ROS2 support
+```
+Build with ROS2 support
+```bash
 PX4_SIM_MODEL=x500 PX4_GZ_VERSION=fortress make px4_sitl gz
-
-# In another terminal, run the microRTPS bridge
+```
+ In another terminal, run the microRTPS bridge
+```bash
 ros2 launch px4_ros_com px4_ros_com.launch.py
 ```
 
@@ -371,18 +376,23 @@ PX4_SIM_MODEL=x500 PX4_GZ_VERSION=harmonic make px4_sitl gz
 4. **Permission errors**: Check file permissions and use `sudo` where necessary
 
 ### Useful Commands
-
+Check Gazebo version
 ```bash
-# Check Gazebo version
 gz sim --version
+```
 
-# Clean PX4 build
+ Clean PX4 build
+ ```bash
 cd ~/PX4-Autopilot && make distclean
+```
 
-# Check PX4 processes
+ Check PX4 processes
+```bash
 ps aux | grep px4
+```
 
-# Kill all PX4 processes
+Kill all PX4 processes
+```bash
 pkill -f px4
 ```
 
