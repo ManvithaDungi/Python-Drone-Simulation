@@ -39,14 +39,6 @@ PX4_SIM_MODEL=x500 PX4_GZ_VERSION=fortress make px4_sitl gz
 
  In another terminal, run the microRTPS bridge
 ```bash
-ros2 launch px4_ros_com px4_ros_com.launch.py
+ros2 launch px4_ros_com offboard_control.launch.py
 ```
 
-#### Step 4: Run ROS2-PX4 Bridge
-In terminal 1, start PX4 SITL
-```bash
-cd ~/PX4-Autopilot
-PX4_SIM_MODEL=x500 PX4_GZ_VERSION=fortress make px4_sitl gz
-```
-
-In Terminal 2, source ROS2 and your workspace (if using px4_ros_com):
