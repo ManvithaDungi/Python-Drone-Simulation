@@ -202,6 +202,7 @@ PX4_SIM_MODEL=x500 PX4_GZ_VERSION=harmonic make px4_sitl gz
 
 #### Step 1: Install MAVSDK for Python
 ```bash
+pip install --upgrade pip
 pip install mavsdk
 ```
 
