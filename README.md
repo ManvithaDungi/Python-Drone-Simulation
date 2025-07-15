@@ -123,6 +123,10 @@ Released under the Apache 2.0 License.
 ```bash
 gz sim shapes.sdf
 ```
+## Alternative: Build Gazebo Harmonic from Source
+
+If you are using **Ubuntu 24.04 Noble** or any unsupported distribution, you can build Gazebo Harmonic from source.
+## Go to [Gazebo Setup from Source](gazeboSetup.md)
 
 **Reference**: [Gazebo Harmonic Installation Guide](https://gazebosim.org/docs/harmonic/install_ubuntu/)
 
