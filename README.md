@@ -262,13 +262,31 @@ export PX4_GZ_WORLD=your_world_name
 PX4_SIM_MODEL=x500 PX4_GZ_VERSION=harmonic make px4_sitl gz
 ```
 
-### Available Drone Models
+### Available Models
 
-- `x500` - Standard quadcopter
-- `x500_mono_cam` - Quadcopter with monocular camera
-- `x500_depth_cam` - Quadcopter with depth camera
-- `plane` - Fixed-wing aircraft
-- `vtol` - Vertical takeoff and landing aircraft
+### Multicopter
+- `gz_x500` - Standard quadcopter  
+- `gz_x500_vision` - Quadrotor with Visual Odometry  
+- `gz_x500_depth` - Quadcopter with depth camera  
+- `gz_x500_mono_cam` - Quadrotor with Monocular Camera  
+- `gz_x500_mono_cam_down` - Quadrotor with Down-facing Monocular Camera  
+- `gz_x500_lidar_down` - Quadrotor with Down-facing 1D LIDAR  
+- `gz_x500_lidar_front` - Quadrotor with Front-facing 1D LIDAR  
+- `gz_x500_lidar_2d` - Quadrotor with 2D LIDAR  
+- `gz_x500_gimbal` - Quadrotor with Front-facing Gimbal  
+
+### Plane / Fixed-Wing
+- `gz_rc_cessna` - Standard fixed-wing plane  
+- `gz_advanced_plane` - Advanced plane with configurable lift/drag physics  
+
+### VTOL
+- `gz_standard_vtol` - Standard VTOL  
+- `gz_quadtailsitter` - VTOL Quad Tailsitter  
+- `gz_tiltrotor` - VTOL Tiltrotor Plane  
+
+### Rover
+- `gz_r1_rover` - Differential Rover  
+- `gz_rover_ackermann` - Ackermann Steering Rover  
 
 ## Troubleshooting
 
