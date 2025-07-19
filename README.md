@@ -195,7 +195,8 @@ After building, you should see:
 #### Step 1: Start PX4 SITL
 ```bash
 cd ~/PX4-Autopilot
-PX4_SIM_MODEL=x500 PX4_GZ_VERSION=harmonic make px4_sitl gz
+make px4_sitl gz_x500_depth (For Deapth Cam)
+make px4_sitl gz_x500 (No camera Installed, Physics Simulation Purpose)
 ```
 
 #### Step 2: Connect QGroundControl
