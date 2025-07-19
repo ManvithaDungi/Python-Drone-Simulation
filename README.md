@@ -178,7 +178,8 @@ PX4_SIM_MODEL=x500 PX4_GZ_VERSION=fortress make px4_sitl gz
 
 #### For Gazebo Harmonic (MAVSDK/QGroundControl users):
 ```bash
-PX4_SIM_MODEL=x500 PX4_GZ_VERSION=harmonic make px4_sitl gz
+cd ~/PX4-Autopilot
+make px4_sitl gz_x500_depth
 ```
 
 ### Step 4: Test the Simulation
@@ -217,7 +218,7 @@ pip install mavsdk
 Make sure PX4 SITL is running first
 ```bash
 cd ~/PX4-Autopilot
-PX4_SIM_MODEL=x500 PX4_GZ_VERSION=harmonic make px4_sitl gz
+make px4_sitl gz_x500_depth
 ```
 In another terminal, run the Python script
 ```bash
