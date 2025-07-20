@@ -213,7 +213,7 @@ pip install mavsdk
 ```
 
 #### Step 2: Download The Script From the repo
-
+#### Go to [offboard_control.py](gazeboSetup.md)
 
 #### Step 3: Run the Control Script
 Make sure PX4 SITL is running first
