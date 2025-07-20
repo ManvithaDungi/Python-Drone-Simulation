@@ -9,6 +9,8 @@ This simulation setup allows you to control drones in a virtual Gazebo environme
 1. **QGroundControl** (Beginner-friendly GUI)
 2. **Python MAVSDK** (Programmatic control)
 3. **ROS2** (Advanced robotics framework)
+   
+The setup supports custom worlds, depth cameras, and offboard control, making it ideal for research and testing.
 
 ## Prerequisites
 
@@ -204,7 +206,7 @@ make px4_sitl gz_x500 (No camera Installed, Physics Simulation Purpose)
 2. It should automatically detect and connect to the simulated drone
 3. Use the GUI to arm, takeoff, and control the drone
 
-### Method 2: Python MAVSDK Control
+### Method 2: Python MAVSDK (Offboard Autonomous Control)
 
 #### Step 1: Install MAVSDK for Python
 ```bash
@@ -213,7 +215,8 @@ pip install mavsdk
 ```
 
 #### Step 2: Download The Script From the repo
-#### Go to [offboard_control.py](gazeboSetup.md)
+#### Go to [offboard_control.py](offboard_control.py)
+Download the above file
 
 #### Step 3: Run the Control Script
 Make sure PX4 SITL is running first
@@ -225,19 +228,32 @@ In another terminal, run the Python script
 ```bash
 python3 offboard_control.py
 ```
-
-
-
-#### Step 2: Install PX4-ROS2 Bridge
-Install required packages
+### Method 2.1: Voice-Controlled Offboard Control
+This script provides manual, autonomous, and voice-controlled operation of the PX4 SITL drone in Gazebo.
+Before running the script you need install the following:
+#### Step 1 : Installing dependencies :
 ```bash
-sudo apt install ros-humble-px4-msgs
+sudo apt install portaudio19-dev python3-pyaudio
+pip install SpeechRecognition
+pip install PyAudio
 ```
- Source ROS2 environment
- ```bash
-echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
-source ~/.bashrc
+#### Step 2: PX4 with voice control
+#### Go to [voice_control.py](voice_control.py) 
+Download the above file 
+
+Ensure PX4 is still running in a terminal, if not run
+```bash
+make px4_sitl gz_x500_depth
 ```
+and then in another terminal run
+```bash
+python3 offboard_voice_control.py
+```
+Menu options will appear for arming, takeoff, manual movement, and switching to voice control with which you can control the drone accordingly.
+You can give voice commands:
+
+Movement: “forward”, “back”, “up 5 meters”
+Actions: “land”, “return home”, “exit”
 
 ## Method 3: Control using ROS2 go to:  [Ros-Integration](Ros2-integration.md)
 
@@ -329,11 +345,10 @@ pkill -f px4
 
 ## Next Steps
 
-1. Start with QGroundControl for basic understanding
-2. Progress to Python MAVSDK for programmatic control
-3. Explore ROS2 integration for advanced robotics applications
-4. Experiment with different drone models and sensors
-5. Create custom worlds and scenarios for testing
-6. Progress to controlling using voice
+1. Start with QGroundControl for basics
+2. Move to Python MAVSDK for autonomy
+3. Add voice control for natural interaction
+4. Try ROS2 for advanced AI integration
+5. Import custom worlds and sensors for testing
 
 Happy flying! 🚁
