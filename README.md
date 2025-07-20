@@ -173,7 +173,7 @@ bash ./Tools/setup/ubuntu.sh
 
 #### For Gazebo Fortress (ROS2 users):
 ```bash
-PX4_SIM_MODEL=x500 PX4_GZ_VERSION=fortress make px4_sitl gz
+make px4_sitl gz_x500
 ```
 
 #### For Gazebo Harmonic (MAVSDK/QGroundControl users):
@@ -259,7 +259,7 @@ cd ~/PX4-Autopilot/Tools/simulation/gz/models/x500
 3. Run with custom world:
 ```bash
 export PX4_GZ_WORLD=your_world_name
-PX4_SIM_MODEL=x500 PX4_GZ_VERSION=harmonic make px4_sitl gz
+make px4_sitl gz_x500
 ```
 
 ### Available Models
