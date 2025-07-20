@@ -334,5 +334,6 @@ pkill -f px4
 3. Explore ROS2 integration for advanced robotics applications
 4. Experiment with different drone models and sensors
 5. Create custom worlds and scenarios for testing
+6. Progress to controlling using voice
 
 Happy flying! 🚁
