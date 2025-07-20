@@ -239,7 +239,7 @@ echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-## Method 3: Control using ROS2 go to:  [Ros-Integration](Ros-integration.md)
+## Method 3: Control using ROS2 go to:  [Ros-Integration](Ros2-integration.md)
 
 ## Advanced Configuration
 
