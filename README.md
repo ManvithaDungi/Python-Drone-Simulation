@@ -1,4 +1,4 @@
-# Python Drone Simulation with PX4 Autopilot
+# Python Drone Simulation with Voice Based Control
 
 This comprehensive guide covers the complete setup process for PX4 Autopilot with Gazebo simulation and various control methods including QGroundControl, Python MAVSDK, and ROS2 integration.
 
