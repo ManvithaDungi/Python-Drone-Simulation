@@ -1,5 +1,10 @@
 # PX4 + Gazebo Harmonic Setup on WSL (Ubuntu)
 
+<<<<<<< HEAD
+=======
+# PX4 + Gazebo Harmonic Setup on WSL (Ubuntu)
+
+>>>>>>> 04ce9dd (voice)
 This guide explains how to set up **PX4 SITL** with **Gazebo Harmonic (gz sim)** on **WSL (Windows Subsystem for Linux)**.
 
 ---

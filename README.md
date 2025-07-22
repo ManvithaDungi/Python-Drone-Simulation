@@ -229,6 +229,7 @@ In another terminal, run the Python script
 python3 offboard_control.py
 ```
 ### Method 2.1: Voice-Controlled Offboard Control
+<<<<<<< HEAD
 This script provides manual, autonomous, and voice-controlled operation of the PX4 SITL drone in Gazebo.
 Before running the script you need install the following:
 #### Step 1 : Installing dependencies :
@@ -254,6 +255,11 @@ You can give voice commands:
 
 Movement: “forward”, “back”, “up 5 meters”
 Actions: “land”, “return home”, “exit”
+=======
+ For controlling the drone using voice based commands 
+ #### Go to [VoiceControl.md](VoiceControl.md) 
+
+>>>>>>> 04ce9dd (voice)
 
 ## Method 3: Control using ROS2 go to:  [Ros-Integration](Ros2-integration.md)
 
